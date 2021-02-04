@@ -6,7 +6,7 @@ return [
      */
     'model_class' => [
 
-        'flexdays' => \App\Models\FlexDay::class,
+        'flexdays' => \App\Models\FlexDay::class
 
     ]
 ];
