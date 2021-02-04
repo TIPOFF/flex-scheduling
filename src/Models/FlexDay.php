@@ -7,7 +7,6 @@ use Tipoff\Support\Models\BaseModel;
 
 class FlexDay extends BaseModel
 {
-
     use HasFactory;
 
     protected $guarded = [
