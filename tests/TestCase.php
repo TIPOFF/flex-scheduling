@@ -4,7 +4,7 @@ namespace Tipoff\FlexScheduling\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Tipoff\FlexScheduling\FlexSchedulingServiceProvider;
+use Tipoff\FlexScheduling\FlexDayServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -20,7 +20,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            FlexSchedulingServiceProvider::class,
+            FlexDayServiceProvider::class,
         ];
     }
 

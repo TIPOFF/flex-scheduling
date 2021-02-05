@@ -5,12 +5,12 @@ namespace Tipoff\FlexScheduling;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Tipoff\FlexScheduling\FlexScheduling
+ * @see \Tipoff\FlexScheduling\FlexDayFacade
  */
-class FlexSchedulingFacade extends Facade
+class FlexDayFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'flex-scheduling';
+        return 'flexdays';
     }
 }

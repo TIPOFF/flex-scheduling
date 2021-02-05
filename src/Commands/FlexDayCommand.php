@@ -4,9 +4,9 @@ namespace Tipoff\FlexScheduling\Commands;
 
 use Illuminate\Console\Command;
 
-class FlexSchedulingCommand extends Command
+class FlexDayCommand extends Command
 {
-    public $signature = 'flex-scheduling';
+    public $signature = 'flexdays';
 
     public $description = 'My command';
 
