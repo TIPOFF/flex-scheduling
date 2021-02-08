@@ -2,12 +2,12 @@
 
 namespace Tipoff\FlexScheduling\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Tipoff\Support\Models\BaseModel;
+use Tipoff\Support\Traits\HasPackageFactory;
 
 class FlexDay extends BaseModel
 {
-    use HasFactory;
+    use HasPackageFactory;
 
     protected $guarded = [
         'id',
