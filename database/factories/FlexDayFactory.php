@@ -3,6 +3,7 @@
 namespace Tipoff\FlexScheduling\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Tipoff\FlexScheduling\Models\FlexDay;
 
 class FlexDayFactory extends Factory
 {
@@ -11,7 +12,7 @@ class FlexDayFactory extends Factory
      *
      * @var string
      */
-    protected $model = app('flex_day');
+    protected $model = FlexDay::class;
 
     /**
      * Define the model's default state.
