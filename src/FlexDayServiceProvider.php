@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tipoff\FlexScheduling;
 
 use Illuminate\Support\Str;
@@ -9,6 +11,12 @@ use Tipoff\FlexScheduling\Commands\FlexDayCommand;
 
 class FlexDayServiceProvider extends PackageServiceProvider
 {
+    public function boot()
+    {
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        parent::boot();
+    }
+
     public function configurePackage(Package $package): void
     {
         /*
@@ -18,10 +26,7 @@ class FlexDayServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('flex-scheduling')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('2020_11_09_100000_create_flex_days_table')
-            ->hasCommand(FlexDayCommand::class);
+            ->hasConfigFile();
     }
 
     /**
