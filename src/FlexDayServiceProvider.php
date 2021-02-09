@@ -7,7 +7,6 @@ namespace Tipoff\FlexScheduling;
 use Illuminate\Support\Str;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Tipoff\FlexScheduling\Commands\FlexDayCommand;
 
 class FlexDayServiceProvider extends PackageServiceProvider
 {
