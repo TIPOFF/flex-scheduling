@@ -8,7 +8,7 @@ class CreateFlexSchedulingTable extends Migration
 {
     public function up()
     {
-      	Schema::create('flex_days', function (Blueprint $table) {
+        Schema::create('flex_days', function (Blueprint $table) {
             $table->id();
             $table->date('date')->index()->unique();
             $table->unsignedTinyInteger('total_staff'); // Really is the max remote monitors on duty during an hour in the day, or the peak staff. Later when employees clcok, in it will be the total.
@@ -65,7 +65,7 @@ class CreateFlexSchedulingTable extends Migration
             $table->unsignedTinyInteger('bucket_22'); // Bucket is used to track bookings that overlap into from 10pm to 11pm
             $table->unsignedTinyInteger('bucket_23'); // Bucket is used to track bookings that overlap into from 11pm to 12pm
 
-            $table->foreignId('updater_id')->nullable()->references('id')->on('users');
+            $table->foreignIdFor(app('user'), 'updater_id')->nullable();
             $table->timestamps();
         });
     }
