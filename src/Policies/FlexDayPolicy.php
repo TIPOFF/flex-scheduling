@@ -2,9 +2,9 @@
 
 namespace Tipoff\FlexScheduling\Policies;
 
-use Tipoff\FlexScheduling\Models\FlexDay;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Tipoff\FlexScheduling\Models\FlexDay;
 
 class FlexDayPolicy
 {
