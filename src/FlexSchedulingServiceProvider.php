@@ -7,7 +7,7 @@ namespace Tipoff\FlexScheduling;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FlexDayServiceProvider extends PackageServiceProvider
+class FlexSchedulingServiceProvider extends PackageServiceProvider
 {
     public function boot()
     {
