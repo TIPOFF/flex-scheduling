@@ -11,3 +11,7 @@ All notable changes to `flex-scheduling` will be documented in this file.
 ## 1.1.0 - 2021-02-11
 
 - update service provider
+
+## 1.1.1 - 2021-02-11
+
+- fix migration class name
