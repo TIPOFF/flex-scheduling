@@ -25,9 +25,6 @@ class FlexSchedulingServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->hasModelInterfaces([
-                FlexDayInterface::class => FlexDay::class,
-            ])
             ->hasPolicies([
                 FlexDay::class => FlexDayPolicy::class
             ])
