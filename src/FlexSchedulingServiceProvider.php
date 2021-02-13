@@ -8,7 +8,6 @@ use Tipoff\FlexScheduling\Models\FlexDay;
 use Tipoff\Support\TipoffPackage;
 use Tipoff\Support\TipoffServiceProvider;
 
-
 class FlexSchedulingServiceProvider extends TipoffServiceProvider
 {
     public function configureTipoffPackage(TipoffPackage $package): void
