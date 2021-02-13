@@ -15,9 +15,7 @@ class AddSignaturePermissions extends Migration
 
             foreach ([
                          'view flex days',
-                         'create flex days',
-                         'update flex days',
-                         'delete flex days'
+                         'update flex days'
                      ] as $name) {
                 app(Permission::class)::findOrCreate($name, null);
             };
