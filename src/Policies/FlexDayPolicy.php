@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tipoff\FlexScheduling\Policies;
 
-use Tipoff\Support\Contracts\Models\UserInterface;
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Tipoff\FlexScheduling\Models\FlexDay;
+use Tipoff\Support\Contracts\Models\UserInterface;
 
 class FlexDayPolicy
 {
