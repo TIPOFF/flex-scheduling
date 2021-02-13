@@ -44,10 +44,7 @@
         "laravel": {
             "providers": [
                 "Tipoff\\FlexScheduling\\FlexSchedulingServiceProvider"
-            ],
-            "aliases": {
-                "FlexScheduling": "Tipoff\\FlexScheduling\\FlexSchedulingFacade"
-            }
+            ]
         }
     },
     "repositories": [
