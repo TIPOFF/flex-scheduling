@@ -29,7 +29,7 @@ class FlexSchedulingServiceProvider extends PackageServiceProvider
                 FlexDayInterface::class => FlexDay::class,
             ])
             ->hasPolicies([
-                FlexDay::class => FlexDayPolicy::class
+                FlexDay::class => FlexDayPolicy::class,
             ])
             ->name('flex-scheduling')
             ->hasConfigFile();
