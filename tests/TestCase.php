@@ -4,7 +4,7 @@ namespace Tipoff\FlexScheduling\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Tipoff\FlexScheduling\FlexDayServiceProvider;
+use Tipoff\FlexScheduling\FlexSchedulingServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -20,7 +20,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            FlexDayServiceProvider::class,
+            FlexSchedulingServiceProvider::class,
         ];
     }
 
@@ -32,10 +32,5 @@ class TestCase extends Orchestra
             'database' => ':memory:',
             'prefix' => '',
         ]);
-
-        /*
-        include_once __DIR__.'/../database/migrations/create_flex_scheduling_table.php.stub';
-        (new \CreatePackageTable())->up();
-        */
     }
 }

@@ -9,10 +9,6 @@ class FlexDay extends BaseModel
 {
     use HasPackageFactory;
 
-    protected $guarded = [
-        'id',
-    ];
-
     protected $casts = [
         'date' => 'date',
     ];
