@@ -1,8 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tipoff\FlexScheduling\Policies;
 
-use App\Models\User;
+use Tipoff\Support\Contracts\Models\UserInterface;
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Tipoff\FlexScheduling\Models\FlexDay;
 
@@ -10,84 +12,37 @@ class FlexDayPolicy
 {
     use HandlesAuthorization;
 
-    /**
-     * Determine whether the user can view any models.
-     *
-     * @param  \App\Models\User  $user
-     * @return mixed
-     */
-    public function viewAny(User $user)
+    public function viewAny(UserInterface $user): bool
     {
         return $user->hasPermissionTo('view flex days') ? true : false;
     }
 
-    /**
-     * Determine whether the user can view the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\FlexDay  $flexDay
-     * @return mixed
-     */
-    public function view(User $user, FlexDay $flexDay)
+    public function view(UserInterface $user, FlexDay $flexDay): bool
     {
         return $user->hasPermissionTo('view flex days') ? true : false;
     }
 
-    /**
-     * Determine whether the user can create models.
-     *
-     * @param  \App\Models\User  $user
-     * @return mixed
-     */
-    public function create(User $user)
+    public function create(UserInterface $user): bool
     {
         return false;
     }
 
-    /**
-     * Determine whether the user can update the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\FlexDay  $flexDay
-     * @return mixed
-     */
-    public function update(User $user, FlexDay $flexDay)
+    public function update(UserInterface $user, FlexDay $flexDay): bool
     {
         return $user->hasPermissionTo('update flex days') ? true : false;
     }
 
-    /**
-     * Determine whether the user can delete the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\FlexDay  $flexDay
-     * @return mixed
-     */
-    public function delete(User $user, FlexDay $flexDay)
+    public function delete(UserInterface $user, FlexDay $flexDay): bool
     {
         return false;
     }
 
-    /**
-     * Determine whether the user can restore the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\FlexDay  $flexDay
-     * @return mixed
-     */
-    public function restore(User $user, FlexDay $flexDay)
+    public function restore(UserInterface $user, FlexDay $flexDay): bool
     {
         return false;
     }
 
-    /**
-     * Determine whether the user can permanently delete the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\FlexDay  $flexDay
-     * @return mixed
-     */
-    public function forceDelete(User $user, FlexDay $flexDay)
+    public function forceDelete(UserInterface $user, FlexDay $flexDay): bool
     {
         return false;
     }

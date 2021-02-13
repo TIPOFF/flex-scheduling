@@ -6,6 +6,8 @@ namespace Tipoff\FlexScheduling;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Tipoff\FlexScheduling\Models\FlexDay;
+use Tipoff\FlexScheduling\Policies\FlexDayPolicy;
 
 class FlexSchedulingServiceProvider extends PackageServiceProvider
 {
@@ -23,6 +25,12 @@ class FlexSchedulingServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
+            ->hasModelInterfaces([
+                FlexDayInterface::class => FlexDay::class,
+            ])
+            ->hasPolicies([
+                FlexDay::class => FlexDayPolicy::class
+            ])
             ->name('flex-scheduling')
             ->hasConfigFile();
     }
