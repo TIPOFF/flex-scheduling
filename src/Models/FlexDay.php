@@ -4,10 +4,12 @@ namespace Tipoff\FlexScheduling\Models;
 
 use Tipoff\Support\Models\BaseModel;
 use Tipoff\Support\Traits\HasPackageFactory;
+use Tipoff\Support\Traits\HasUpdater;
 
 class FlexDay extends BaseModel
 {
     use HasPackageFactory;
+    use HasUpdater;
 
     protected $casts = [
         'date' => 'date',
@@ -26,9 +28,6 @@ class FlexDay extends BaseModel
         static::saving(function ($day) {
             $day->updateMax();
             $day->updateStaffTotal();
-            if (auth()->check()) {
-                $day->updater_id = auth()->id();
-            }
         });
     }
 

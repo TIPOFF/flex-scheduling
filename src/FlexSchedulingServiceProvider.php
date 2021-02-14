@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tipoff\FlexScheduling;
 
 use Tipoff\FlexScheduling\Models\FlexDay;
+use Tipoff\FlexScheduling\Policies\FlexDayPolicy;
 use Tipoff\Support\TipoffPackage;
 use Tipoff\Support\TipoffServiceProvider;
 
