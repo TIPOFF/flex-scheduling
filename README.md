@@ -5,7 +5,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/tipoff/flex-scheduling.svg?style=flat-square)](https://packagist.org/packages/tipoff/flex-scheduling)
 
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This is where your description should go.
 
 ## Installation
 
@@ -34,12 +34,17 @@ return [
 ];
 ```
 
-## Usage
+## Models
 
-```php
-$flex-scheduling = new Tipoff\FlexScheduling();
-echo $flex-scheduling->echoPhrase('Hello, Tipoff!');
-```
+We include the following model:
+
+**List of Models**
+
+- Flex Day
+
+For each of these models, this package implements an [authorization policy](https://laravel.com/docs/8.x/authorization) that extends the roles and permissions approach of the [tipoff/authorization](https://github.com/tipoff/authorization) package. The policies for each model in this package are registered through the package and do not need to be registered manually.
+
+The models also have [Laravel Nova resources](https://nova.laravel.com/docs/3.0/resources/) in this package and they are also registered through the package and do not need to be registered manually.
 
 ## Testing
 
