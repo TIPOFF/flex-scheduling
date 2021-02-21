@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tipoff\FlexScheduling\Tests;
 
 use Tipoff\FlexScheduling\FlexSchedulingServiceProvider;
