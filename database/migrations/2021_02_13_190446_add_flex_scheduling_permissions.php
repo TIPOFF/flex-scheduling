@@ -10,8 +10,7 @@ class AddFlexSchedulingPermissions extends BasePermissionsMigration
     {
         $permissions =[
             'view flex days' => ['Owner', 'Staff'],
-            'update flex days' => ['Owner'],
-            'delete flex days' => [],   // Admin only
+            'update flex days' => ['Owner']
         ];
 
         $this->createPermissions($permissions);
