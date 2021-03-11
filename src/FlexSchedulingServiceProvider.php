@@ -17,6 +17,9 @@ class FlexSchedulingServiceProvider extends TipoffServiceProvider
             ->hasPolicies([
                 FlexDay::class => FlexDayPolicy::class,
             ])
+            ->hasNovaResources([
+                \Tipoff\FlexScheduling\Nova\FlexDay::class,
+            ])
             ->name('flex-scheduling')
             ->hasConfigFile();
     }
