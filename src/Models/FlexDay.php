@@ -53,25 +53,25 @@ class FlexDay extends BaseModel
         $this->bucket_22 = 0;
         $this->bucket_23 = 0;
         $this->updater_id = 1;
-        if (date('w', $this->date) == 1) {
+        if (date('w', $this->date->getTimestamp()) == 1) {
             $this->generateMonTuesStaff();
         }
-        if (date('w', $this->date) == 2) {
+        if (date('w', $this->date->getTimestamp()) == 2) {
             $this->generateMonTuesStaff();
         }
-        if (date('w', $this->date) == 3) {
+        if (date('w', $this->date->getTimestamp()) == 3) {
             $this->generateWedThursStaff();
         }
-        if (date('w', $this->date) == 4) {
+        if (date('w', $this->date->getTimestamp()) == 4) {
             $this->generateWedThursStaff();
         }
-        if (date('w', $this->date) == 5) {
+        if (date('w', $this->date->getTimestamp()) == 5) {
             $this->generateFridayStaff();
         }
-        if (date('w', $this->date) == 6) {
+        if (date('w', $this->date->getTimestamp()) == 6) {
             $this->generateSaturdayStaff();
         }
-        if (date('w', $this->date) == 0) {
+        if (date('w', $this->date->getTimestamp()) == 0) {
             $this->generateSundayStaff();
         }
         $this->updateStaffTotal();
