@@ -23,13 +23,13 @@ class FlexDay extends BaseModel
     {
         parent::boot();
 
-        static::creating(function ($day) {
-            $day->generateDefaults();
+        static::creating(function ($flexDay) {
+            $flexDay->generateDefaults();
         });
 
-        static::saving(function ($day) {
-            $day->updateMax();
-            $day->updateStaffTotal();
+        static::saving(function ($flexDay) {
+            $flexDay->updateMax();
+            $flexDay->updateStaffTotal();
         });
     }
 
@@ -53,25 +53,25 @@ class FlexDay extends BaseModel
         $this->bucket_22 = 0;
         $this->bucket_23 = 0;
         $this->updater_id = 1;
-        if (date('w', $this->day) == 1) {
+        if (date('w', $this->date->getTimestamp()) == 1) {
             $this->generateMonTuesStaff();
         }
-        if (date('w', $this->day) == 2) {
+        if (date('w', $this->date->getTimestamp()) == 2) {
             $this->generateMonTuesStaff();
         }
-        if (date('w', $this->day) == 3) {
+        if (date('w', $this->date->getTimestamp()) == 3) {
             $this->generateWedThursStaff();
         }
-        if (date('w', $this->day) == 4) {
+        if (date('w', $this->date->getTimestamp()) == 4) {
             $this->generateWedThursStaff();
         }
-        if (date('w', $this->day) == 5) {
+        if (date('w', $this->date->getTimestamp()) == 5) {
             $this->generateFridayStaff();
         }
-        if (date('w', $this->day) == 6) {
+        if (date('w', $this->date->getTimestamp()) == 6) {
             $this->generateSaturdayStaff();
         }
-        if (date('w', $this->day) == 0) {
+        if (date('w', $this->date->getTimestamp()) == 0) {
             $this->generateSundayStaff();
         }
         $this->updateStaffTotal();
