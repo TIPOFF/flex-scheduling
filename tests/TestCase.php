@@ -4,10 +4,13 @@ declare(strict_types=1);
 
 namespace Tipoff\FlexScheduling\Tests;
 
-use Tipoff\Authorization\AuthorizationServiceProvider;
+use Laravel\Nova\NovaCoreServiceProvider;
 use Tipoff\FlexScheduling\FlexSchedulingServiceProvider;
 use Tipoff\Support\SupportServiceProvider;
 use Tipoff\TestSupport\BaseTestCase;
+use Spatie\Permission\PermissionServiceProvider;
+use Tipoff\FlexScheduling\Tests\Support\Providers\NovaPackageServiceProvider;
+use Tipoff\Authorization\AuthorizationServiceProvider;
 
 class TestCase extends BaseTestCase
 {
@@ -15,8 +18,11 @@ class TestCase extends BaseTestCase
     {
         return [
             SupportServiceProvider::class,
-            AuthorizationServiceProvider::class,
             FlexSchedulingServiceProvider::class,
+            PermissionServiceProvider::class,
+            NovaPackageServiceProvider::class,
+            NovaCoreServiceProvider::class,
+            AuthorizationServiceProvider::class
         ];
     }
 }
